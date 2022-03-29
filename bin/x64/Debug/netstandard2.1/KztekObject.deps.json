@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "KztekObject/1.0.0": {
+        "dependencies": {
+          "SocketHelper": "1.0.0",
+          "BioBridgeSDKDLLv3": "3.0.0.3",
+          "Interop.zkemkeeper": "1.0.0.0"
+        },
+        "runtime": {
+          "KztekObject.dll": {}
+        }
+      },
+      "SocketHelper/1.0.0": {
+        "runtime": {
+          "SocketHelper.dll": {}
+        }
+      },
+      "BioBridgeSDKDLLv3/3.0.0.3": {
+        "runtime": {
+          "BioBridgeSDKDLLv3.dll": {
+            "assemblyVersion": "3.0.0.3",
+            "fileVersion": "3.0.0.3"
+          }
+        }
+      },
+      "Interop.zkemkeeper/1.0.0.0": {
+        "runtime": {
+          "Interop.zkemkeeper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KztekObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SocketHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BioBridgeSDKDLLv3/3.0.0.3": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.zkemkeeper/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

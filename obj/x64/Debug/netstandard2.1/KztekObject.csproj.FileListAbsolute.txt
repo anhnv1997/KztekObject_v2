@@ -1,0 +1,15 @@
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\KztekObject.deps.json
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\KztekObject.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\KztekObject.pdb
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\BioBridgeSDKDLLv3.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\Interop.zkemkeeper.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\SocketHelper.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\x64\Debug\netstandard2.1\SocketHelper.pdb
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.csproj.AssemblyReference.cache
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.AssemblyInfoInputs.cache
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.AssemblyInfo.cs
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.csproj.CoreCompileInputs.cache
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.csproj.CopyComplete
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\x64\Debug\netstandard2.1\KztekObject.pdb
