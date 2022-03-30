@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SocketHelper\SocketHelper.csproj" />
+    <ProjectReference Include="C:\Users\VIET ANH\Desktop\CardLibrary\CardLibrary.csproj" />
+    <ProjectReference Include="C:\Users\VIET ANH\Desktop\TimezoneLibrary\TimezoneLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

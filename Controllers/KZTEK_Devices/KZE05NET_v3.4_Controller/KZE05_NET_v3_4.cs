@@ -1,4 +1,5 @@
-﻿using KztekObject.Cards;
+﻿using CardLibrary;
+using KztekObject.Cards;
 using KztekObject.Controllers.Abstract_KZTEK_Controllers;
 using KztekObject.enums;
 using KztekObject.Objects;
@@ -10,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TimezoneLibrary;
 using static KztekObject.Events.ControllerEvent;
 
 namespace KztekObject.Controllers.KZE05NET_Controller
@@ -206,12 +208,12 @@ namespace KztekObject.Controllers.KZE05NET_Controller
 
         #region: TIMEZONE
         //SET
-        public override bool SetTimezone(int timezoneID, string[] timezoneString)
+        public override bool SetTimezone(AccessTimezone timezoneData)
         {
             return false;
         }
         //GET
-        public override bool GetTimeZone(ref string timeZoneString, int TimeZoneID)
+        public override bool GetTimeZone(ref AccessTimezone timezoneData)
         {
             return false;
         }

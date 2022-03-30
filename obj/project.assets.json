@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "CardLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CardLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CardLibrary.dll": {}
+        }
+      },
       "SocketHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -11,19 +21,41 @@
         "runtime": {
           "bin/placeholder/SocketHelper.dll": {}
         }
+      },
+      "TimezoneLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/TimezoneLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimezoneLibrary.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "CardLibrary/1.0.0": {
+      "type": "project",
+      "path": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj",
+      "msbuildProject": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj"
+    },
     "SocketHelper/1.0.0": {
       "type": "project",
       "path": "../SocketHelper/SocketHelper.csproj",
       "msbuildProject": "../SocketHelper/SocketHelper.csproj"
+    },
+    "TimezoneLibrary/1.0.0": {
+      "type": "project",
+      "path": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj",
+      "msbuildProject": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "SocketHelper >= 1.0.0"
+      "CardLibrary >= 1.0.0",
+      "SocketHelper >= 1.0.0",
+      "TimezoneLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +85,12 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj": {
+              "projectPath": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj"
+            },
+            "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj": {
+              "projectPath": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj"
+            },
             "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\SocketHelper\\SocketHelper.csproj": {
               "projectPath": "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\SocketHelper\\SocketHelper.csproj"
             }

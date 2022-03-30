@@ -13,7 +13,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static KztekObject.Cards.CardFactory;
+using TimezoneLibrary;
+using static CardLibrary.CardFactory;
 using static KztekObject.Events.ControllerEvent;
 
 namespace KztekObject.Controllers.Abstract_KZTEK_Controllers
@@ -282,9 +283,9 @@ namespace KztekObject.Controllers.Abstract_KZTEK_Controllers
 
         #region: TIMEZONE
         //SET
-        public abstract bool SetTimezone(int timezoneID, string[] timezoneString);
+        public abstract bool SetTimezone(AccessTimezone timezoneData);
         //GET
-        public abstract bool GetTimeZone(ref string timeZoneString, int TimeZoneID);
+        public abstract bool GetTimeZone(ref AccessTimezone timezoneData);
         //DELETE
         public abstract bool DeleteTimeZone(int timezoneID);
         #endregion: END TIMEZONE

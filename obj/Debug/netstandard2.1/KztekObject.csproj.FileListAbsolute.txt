@@ -12,3 +12,7 @@ D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\Debug\netstandard2.1\KztekObje
 D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\Debug\netstandard2.1\KztekObject.csproj.CopyComplete
 D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\Debug\netstandard2.1\KztekObject.dll
 D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\obj\Debug\netstandard2.1\KztekObject.pdb
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\Debug\netstandard2.1\CardLibrary.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\Debug\netstandard2.1\CardLibrary.pdb
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\Debug\netstandard2.1\TimezoneLibrary.dll
+D:\2.KZTECH\5.DuAn\13.IAccess_new\KztekObject\bin\Debug\netstandard2.1\TimezoneLibrary.pdb

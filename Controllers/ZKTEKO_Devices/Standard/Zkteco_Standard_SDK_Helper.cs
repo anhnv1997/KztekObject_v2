@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TimezoneLibrary;
 using zkemkeeper;
 using static KztekObject.enums.CommunicationType;
 
@@ -350,7 +351,7 @@ namespace KztekObject.Controllers.ZKTEKO_Devices.Standard
         /// <param name="timezoneIndex">[IN] Timezone Index</param>
         /// <param name="timezones">[Out] timezoneDatas</param>
         /// <returns></returns>
-        public bool GetTimezone(int machineNumber, int timezoneIndex, ref Dictionary<string, Dictionary<string, string>> timezones)
+        public bool GetTimezone(int machineNumber, int timezoneIndex, ref AccessTimezone timezones)
         {
             string sTimeZone = "";
             bool result = axCZKEM1.GetTZInfo(machineNumber, timezoneIndex, ref sTimeZone);
@@ -364,35 +365,15 @@ namespace KztekObject.Controllers.ZKTEKO_Devices.Standard
                     j++;
                     i = i + 2;
                 }
-                string SUNs = array[0] + ":" + array[1];
-                string SUNe = array[2] + ":" + array[3];
-
-                string MONs = array[4] + ":" + array[5];
-                string MONe = array[6] + ":" + array[7];
-
-                string TUEs = array[8] + ":" + array[9];
-                string TUEe = array[10] + ":" + array[11];
-
-                string WENs = array[12] + ":" + array[13];
-                string WENe = array[14] + ":" + array[15];
-
-                string THUs = array[16] + ":" + array[17];
-                string THUe = array[18] + ":" + array[19];
-
-                string FRIs = array[20] + ":" + array[21];
-                string FRIe = array[22] + ":" + array[23];
-
-                string SATs = array[24] + ":" + array[25];
-                string SATe = array[26] + ":" + array[27];
-                timezones = new Dictionary<string, Dictionary<string, string>>();
-
-                timezones.Add("SUN", new Dictionary<string, string>() { { "START", SUNs }, { "END", SUNe } });
-                timezones.Add("MON", new Dictionary<string, string>() { { "START", MONs }, { "END", MONe } });
-                timezones.Add("TUE", new Dictionary<string, string>() { { "START", TUEs }, { "END", TUEe } });
-                timezones.Add("WEN", new Dictionary<string, string>() { { "START", WENs }, { "END", WENe } });
-                timezones.Add("THU", new Dictionary<string, string>() { { "START", THUs }, { "END", THUe } });
-                timezones.Add("FRI", new Dictionary<string, string>() { { "START", FRIs }, { "END", FRIe } });
-                timezones.Add("SAT", new Dictionary<string, string>() { { "START", SATs }, { "END", SATe } });
+                AccessTimezone timezone = new AccessTimezone();
+                timezone.ID = timezoneIndex;
+                timezone.SetValues(EM_DayOfWeek.MON, Int32.Parse(array[4]), Int32.Parse(array[5]), Int32.Parse(array[6]), Int32.Parse(array[7]));
+                timezone.SetValues(EM_DayOfWeek.TUE, Int32.Parse(array[8]), Int32.Parse(array[9]), Int32.Parse(array[10]), Int32.Parse(array[11]));
+                timezone.SetValues(EM_DayOfWeek.WED, Int32.Parse(array[12]), Int32.Parse(array[13]), Int32.Parse(array[14]), Int32.Parse(array[15]));
+                timezone.SetValues(EM_DayOfWeek.THURSDAY, Int32.Parse(array[16]), Int32.Parse(array[17]), Int32.Parse(array[18]), Int32.Parse(array[19]));
+                timezone.SetValues(EM_DayOfWeek.FRIDAY, Int32.Parse(array[20]), Int32.Parse(array[21]), Int32.Parse(array[22]), Int32.Parse(array[23]));
+                timezone.SetValues(EM_DayOfWeek.SATURDAY, Int32.Parse(array[24]), Int32.Parse(array[25]), Int32.Parse(array[26]), Int32.Parse(array[27]));
+                timezone.SetValues(EM_DayOfWeek.SUN, Int32.Parse(array[0]), Int32.Parse(array[1]), Int32.Parse(array[2]), Int32.Parse(array[3]));
             }
             return result;
         }
@@ -404,28 +385,66 @@ namespace KztekObject.Controllers.ZKTEKO_Devices.Standard
         /// <param name="timezoneIndex">[IN] timezoneIndex</param>
         /// <param name="timezones">[IN] Timezone Datas</param>
         /// <returns></returns>
-        public bool SetTimezone(int machineID, int timezoneIndex, Dictionary<string, Dictionary<string, string>> timezones)
+        public bool SetTimezone(int machineID,AccessTimezone timezoneData)
         {
-            string SUNs = timezones["SUN"]["START"].Replace(":", string.Empty);
-            string SUNe = timezones["SUN"]["END"].Replace(":", string.Empty);
+            int timezoneIndex = timezoneData.ID;
 
-            string MONs = timezones["MON"]["START"].Replace(":", string.Empty);
-            string MONe = timezones["MON"]["END"].Replace(":", string.Empty);
+            string startSUN_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.SUN.ToString()]["START_HOUR"].ToString("00");
+            string startSUN_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.SUN.ToString()]["START_MINUTE"].ToString("00");
+            string endSUN_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.SUN.ToString()]["END_HOUR"].ToString("00");
+            string endSUN_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.SUN.ToString()]["END_MINUTE"].ToString("00");
 
-            string TUEs = timezones["TUE"]["START"].Replace(":", string.Empty);
-            string TUEe = timezones["TUE"]["END"].Replace(":", string.Empty);
+            string startMON_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.MON.ToString()]["START_HOUR"].ToString("00");
+            string startMON_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.MON.ToString()]["START_MINUTE"].ToString("00");
+            string endMON_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.MON.ToString()]["END_HOUR"].ToString("00");
+            string endMON_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.MON.ToString()]["END_MINUTE"].ToString("00");
 
-            string WENs = timezones["WEN"]["START"].Replace(":", string.Empty);
-            string WENe = timezones["WEN"]["END"].Replace(":", string.Empty);
+            string startTUE_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.TUE.ToString()]["START_HOUR"].ToString("00");
+            string startTUE_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.TUE.ToString()]["START_MINUTE"].ToString("00");
+            string endTUE_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.TUE.ToString()]["END_HOUR"].ToString("00");
+            string endTUE_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.TUE.ToString()]["END_MINUTE"].ToString("00");
 
-            string THUs = timezones["THU"]["START"].Replace(":", string.Empty);
-            string THUe = timezones["THU"]["END"].Replace(":", string.Empty);
+            string startWEN_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.WED.ToString()]["START_HOUR"].ToString("00");
+            string startWEN_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.WED.ToString()]["START_MINUTE"].ToString("00");
+            string endWEN_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.WED.ToString()]["END_HOUR"].ToString("00");
+            string endWEN_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.WED.ToString()]["END_MINUTE"].ToString("00");
 
-            string FRIs = timezones["FRI"]["START"].Replace(":", string.Empty);
-            string FRIe = timezones["FRI"]["END"].Replace(":", string.Empty);
+            string startTHU_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.THURSDAY.ToString()]["START_HOUR"].ToString("00");
+            string startTHU_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.THURSDAY.ToString()]["START_MINUTE"].ToString("00");
+            string endTHU_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.THURSDAY.ToString()]["END_HOUR"].ToString("00");
+            string endTHU_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.THURSDAY.ToString()]["END_MINUTE"].ToString("00");
 
-            string SATs = timezones["SAT"]["START"].Replace(":", string.Empty);
-            string SATe = timezones["SAT"]["END"].Replace(":", string.Empty);
+            string startFRI_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.FRIDAY.ToString()]["START_HOUR"].ToString("00");
+            string startFRI_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.FRIDAY.ToString()]["START_MINUTE"].ToString("00");
+            string endFRI_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.FRIDAY.ToString()]["END_HOUR"].ToString("00");
+            string endFRI_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.FRIDAY.ToString()]["END_MINUTE"].ToString("00");
+
+            string startSAT_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.SATURDAY.ToString()]["START_HOUR"].ToString("00");
+            string startSAT_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.SATURDAY.ToString()]["START_MINUTE"].ToString("00");
+            string endSAT_Hour = timezoneData.TimezoneDatas[EM_DayOfWeek.SATURDAY.ToString()]["END_HOUR"].ToString("00");
+            string endSAT_Minute = timezoneData.TimezoneDatas[EM_DayOfWeek.SATURDAY.ToString()]["END_MINUTE"].ToString("00");
+
+
+            string SUNs = startSUN_Hour + startSUN_Minute;
+            string SUNe = endSUN_Hour + endSUN_Minute;
+
+            string MONs = startMON_Hour + startMON_Minute;
+            string MONe = endMON_Hour + endMON_Minute;
+
+            string TUEs = startTUE_Hour + startTUE_Minute;
+            string TUEe = endTUE_Hour + endTUE_Minute;
+
+            string WENs = startWEN_Hour + startWEN_Minute;
+            string WENe = endWEN_Hour + endWEN_Minute;
+
+            string THUs = startTHU_Hour + startTHU_Minute;
+            string THUe = endTHU_Hour + endTHU_Minute;
+
+            string FRIs = startFRI_Hour + startFRI_Minute;
+            string FRIe = endFRI_Hour + endFRI_Minute;
+
+            string SATs = startSAT_Hour + startSAT_Minute;
+            string SATe = endSAT_Hour + endSAT_Minute;
             string timezonedata = SUNs + SUNe + MONs + MONe + TUEs + TUEe + WENs + WENe + THUs + THUe + FRIs + FRIe + SATs + SATe;
             return axCZKEM1.SetTZInfo(machineID, timezoneIndex, timezonedata);
         }

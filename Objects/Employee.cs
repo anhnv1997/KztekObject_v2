@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static KztekObject.Cards.CardFactory;
+using static CardLibrary.CardFactory;
 
 namespace KztekObject.Objects
 {
@@ -15,6 +15,5 @@ namespace KztekObject.Objects
         public List<string> fingerDatas { get; set; } = new List<string>();
         public string Name { get; set; } = "";
         public string Password { get; set; } = "";
-
     }
 }

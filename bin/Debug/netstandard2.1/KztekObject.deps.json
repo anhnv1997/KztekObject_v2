@@ -9,16 +9,28 @@
     ".NETStandard,Version=v2.1/": {
       "KztekObject/1.0.0": {
         "dependencies": {
+          "CardLibrary": "1.0.0",
           "SocketHelper": "1.0.0",
+          "TimezoneLibrary": "1.0.0",
           "Interop.zkemkeeper": "1.0.0.0"
         },
         "runtime": {
           "KztekObject.dll": {}
         }
       },
+      "CardLibrary/1.0.0": {
+        "runtime": {
+          "CardLibrary.dll": {}
+        }
+      },
       "SocketHelper/1.0.0": {
         "runtime": {
           "SocketHelper.dll": {}
+        }
+      },
+      "TimezoneLibrary/1.0.0": {
+        "runtime": {
+          "TimezoneLibrary.dll": {}
         }
       },
       "Interop.zkemkeeper/1.0.0.0": {
@@ -37,7 +49,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CardLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SocketHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TimezoneLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -3,7 +3,8 @@ using KztekObject.Objects;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static KztekObject.Cards.CardFactory;
+using TimezoneLibrary;
+using static CardLibrary.CardFactory;
 using static KztekObject.Events.ControllerEvent;
 
 namespace KztekObject
@@ -60,9 +61,9 @@ namespace KztekObject
 
         #region: TIMEZONE
         //SET
-        bool SetTimezone(int timezoneID, string[] timezoneString);
+        bool SetTimezone(AccessTimezone timezoneData);
         //GET
-        bool GetTimeZone(ref string timeZoneString, int TimeZoneID);
+        bool GetTimeZone(ref AccessTimezone timezoneData);
         //DELETE
         bool DeleteTimeZone(int timezoneID);
         #endregion: END TIMEZONE

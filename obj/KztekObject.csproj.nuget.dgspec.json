@@ -4,6 +4,120 @@
     "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\KztekObject\\KztekObject.csproj": {}
   },
   "projects": {
+    "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj",
+        "projectName": "CardLibrary",
+        "projectPath": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj",
+        "packagesPath": "C:\\Users\\VIET ANH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\VIET ANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj",
+        "projectName": "TimezoneLibrary",
+        "projectPath": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj",
+        "packagesPath": "C:\\Users\\VIET ANH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\VIET ANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\KztekObject\\KztekObject.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,6 +142,12 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
+              "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj": {
+                "projectPath": "C:\\Users\\VIET ANH\\Desktop\\CardLibrary\\CardLibrary.csproj"
+              },
+              "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj": {
+                "projectPath": "C:\\Users\\VIET ANH\\Desktop\\TimezoneLibrary\\TimezoneLibrary.csproj"
+              },
               "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\SocketHelper\\SocketHelper.csproj": {
                 "projectPath": "D:\\2.KZTECH\\5.DuAn\\13.IAccess_new\\SocketHelper\\SocketHelper.csproj"
               }

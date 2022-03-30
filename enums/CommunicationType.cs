@@ -13,7 +13,7 @@ namespace KztekObject.enums
             USB
         }
 
-        public static bool IS_TCP (EM_CommunicationType communicationType)
+        public static bool IS_TCP(EM_CommunicationType communicationType)
         {
             return communicationType == EM_CommunicationType.TCP_IP;
         }

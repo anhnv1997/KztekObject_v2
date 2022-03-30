@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static KztekObject.Cards.CardFactory;
+using static CardLibrary.CardFactory;
 using static KztekObject.enums.CommunicationType;
 using static KztekObject.enums.Controller_Function;
 
@@ -25,8 +25,6 @@ namespace KztekObject.Objects
 
         public int Comkey { get; set; } = 0;
         public int MachineID { get; set; } = 1;
-
-
     }
 }
 

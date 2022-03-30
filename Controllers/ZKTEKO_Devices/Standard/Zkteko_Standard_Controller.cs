@@ -1,4 +1,5 @@
-﻿using KztekObject.Cards;
+﻿using CardLibrary;
+using KztekObject.Cards;
 using KztekObject.enums;
 using KztekObject.Events;
 using KztekObject.Objects;
@@ -10,7 +11,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static KztekObject.Cards.CardFactory;
+using TimezoneLibrary;
+using static CardLibrary.CardFactory;
 using static KztekObject.Controllers.ZKTEKO_Devices.Standard.Zkteco_Standard_SDK_Helper;
 using static KztekObject.Events.ControllerEvent;
 
@@ -325,17 +327,19 @@ namespace KztekObject.Controllers.ZKTEKO_Devices.Standard
 
         #region: TIMEZONE
         //SET
-        public bool SetTimezone(int timezoneID, string[] timezoneString)
+        public bool SetTimezone(AccessTimezone timezoneData)
         {
-            return false;
+            standard_SDK_Helper.EnableDevice(this.ControllerInfor.MachineID, false);
+            bool result = standard_SDK_Helper.SetTimezone(this.ControllerInfor.MachineID, timezoneData);
+            standard_SDK_Helper.EnableDevice(this.ControllerInfor.MachineID, true);
+            return result;
         }
         //GET
-        public bool GetTimeZone(ref string timeZoneString, int TimeZoneID)
+        public bool GetTimeZone(ref AccessTimezone timezoneData)
         {
             standard_SDK_Helper.EnableDevice(this.ControllerInfor.MachineID,false);
             Dictionary<string, Dictionary<string, string>> timezones = new Dictionary<string, Dictionary<string, string>>();
-            bool result = standard_SDK_Helper.GetTimezone(this.ControllerInfor.MachineID, TimeZoneID, ref timezones );
-            timeZoneString = timezones.ToString();
+            bool result = standard_SDK_Helper.GetTimezone(this.ControllerInfor.MachineID, timezoneData.ID, ref timezoneData);
             standard_SDK_Helper.EnableDevice(this.ControllerInfor.MachineID,true);
             return result;
         }
